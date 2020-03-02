@@ -1,58 +1,16 @@
-
-
 import Foundation
 import UIKit
-
 
 let ProductionMode =  true
 //let AppVersion = "0.2.4"
 
-let TempEmail =  "" // "test1@yopmail.com"
-let TempPass =  ""//  "Faq2121#$"
+let TempEmail =  ""
+let TempPass =  ""
 
 let LoginStoryboard =  "Main"
 let LoginStoryboardiPad =  "MainiPad"
 let SplashVC = "SplashViewController"
 let LoginVC = "LoginViewController"
-let ForgotPasswordVC = "ForgotPasswordViewController"
-let SettingVC = "SettingsViewController"
-
-let DashboardStoryboard = "Dashboard"
-let DashboardVC = "DashboardViewController"
-
-
-let FANurseStoryboard = "FacilityAdminAndNurseStoryboard"
-let FANurseStoryboardiPad = "FacilityAdminAndNurseStoryboardiPad"
-let FAHomeVC = "FacilityAdminHomeViewController"
-let FAWardVC = "WardListViewController"
-let FacilityAddEidtVC = "FacilityAddEidtViewController"
-let FacilityDetailsVC = "FacilityDeatilsViewController"
-
-let RegisterTermsAndConditionVC = "RegistrationTermConditionsViewController"
-let Register1VC = "Registration1ViewController"
-let Register2VC = "Registration2ViewController"
-let Register3VC = "Registration3ViewController"
-let RegisterPreviewVC = "RegistrationPreviewViewController"
-
-
-
-
-let ResidentDetailsVC = "ResidentDetailsViewController"
-let ResidentListVC = "ResidentListViewController"
-let AddResident1VC = "AddResident1ViewController"
-let AddResident2VC = "AddResident2ViewController"
-let AddResident3VC = "AddResident3ViewController"
-let AddResident4VC = "AddResident4ViewController"
-
-let ForgotPass1VC = "ForgotPassword1ViewController"
-let ForgotPass2VC = "ForgotPassword2ViewController"
-
-
-
-let NurseListVC = "NurseListViewController"
-let AddEditNurseVC = "AddEditNurseViewController"
-
-
 
 let DEVICE_WIDTH :Int =  Int(UIScreen.main.bounds.size.width)
 let DEVICE_HEIGHT:Int =  Int(UIScreen.main.bounds.size.height)
@@ -61,11 +19,6 @@ let SCREEN_MAX_LENGTH = max(DEVICE_WIDTH, DEVICE_HEIGHT)
 let SCREEN_MIN_LENGTH = min(DEVICE_WIDTH, DEVICE_HEIGHT)
 
 let SF: Float = Float(SCREEN_MIN_LENGTH)/Float(320.0)
-
-//let SF_PAD: Float = IS_DEVICE_IPHONE ? Float(DEVICE_WIDTH)/Float(375.0) : Float(DEVICE_WIDTH)/Float(400.0)
-//let SF_PAD: Float = IS_DEVICE_IPHONE ? Float(DEVICE_WIDTH)/Float(375.0) : Float(DEVICE_WIDTH)/Float(575.0)
-
-//let SF_CONS: Float = IS_DEVICE_IPHONE ? Float(DEVICE_WIDTH)/Float(375.0) : Float(DEVICE_HEIGHT)/Float(667)
 
 let SF_PAD: Float = IS_DEVICE_IPHONE ? Float(SCREEN_MIN_LENGTH)/Float(375.0) : Float(SCREEN_MAX_LENGTH)/Float(667.0)
 let SF_CONS: Float = IS_DEVICE_IPHONE ? Float(SCREEN_MIN_LENGTH)/Float(375.0) : Float(SCREEN_MIN_LENGTH)/Float(500.0)
@@ -102,7 +55,6 @@ let ADDRESS_LIMIT = 200
 let PHONE_LIMIT = 19
 let FAX_LIMIT = 20
 
-
 let MaximumDevicesGroupSessionTeacher = 6
 let API_Timeout = 60
 let DASHBOARD_SYNC_TIME = 1.0
@@ -110,60 +62,55 @@ let DASHBOARD_SYNC_TIME = 1.0
 let DevicePlatform = "iOS"
 let DeviceRegistrar = "Apple"
 
-let DOMAIN_URL = "http://api.resicare.faqdev.com.au/" // "http://192.168.1.127:8080/" //"http://api.resicare.faqdev.com.au/"  // "http://api.resicare.faqdev.com.au/"
+let DOMAIN_URL = ""
 let WEB_URL = ""
-let LOGIN_URL = "account/login"
-let REGISTER_URL = "account/register"
-let EMAIL_VERIFY_URL = "account/verify"
-let PROFILE_GET_URL = "account/getProfile"
-let PROFILE_SETUP_URL = "account/saveProfile"
-let FORGET_PASSWORD_URL = "account/forgotPassword"
-let CHANGE_PASSWORD_URL = "account/changePassword"
-let STAFF_ADD_URL = "account/createStaff"
-let STAFF_EDIT_URL = "account/editStaff"
-let STAFF_DELETE_URL = "account/deleteStaff"
+let LOGIN_URL = "APIlogin"
+let REGISTER_URL = "APIregister"
+let EMAIL_VERIFY_URL = "APIverify"
+let PROFILE_GET_URL = "APIgetProfile"
+let PROFILE_SETUP_URL = "APIsaveProfile"
+let FORGET_PASSWORD_URL = "APIforgotPassword"
+let CHANGE_PASSWORD_URL = "APIchangePassword"
+let STAFF_ADD_URL = "APIcreateStaff"
+let STAFF_EDIT_URL = "APIeditStaff"
+let STAFF_DELETE_URL = "APIdeleteStaff"
 
 let FACILITY_ADD_URL = "facility/create"
 let FACILITY_EDIT_URL = "facility/edit"
-
 
 let FACILITY_ADDWARD_URL = "facility/addWard"
 let FACILITY_EDITWARD_URL = "facility/editWard"
 let FACILITY_DELETEWARD_URL = "facility/deleteWard"
 
-
-let DASHBOARD_URL = "account/dashboard"
+let DASHBOARD_URL = "APIdashboard"
 let PUSH_URL = "datasync/push"
 let PULL_URL = "datasync/pull"
 
-let RESIDENCE_CREATE_URL = "resident/create"
-let RESIDENCE_EDIT_URL = "resident/edit"
-let RESIDENCE_DELETE_URL = "resident/delete"
-let RESIDENCE_ADD_CONTACT_URL = "resident/addContact"
-let RESIDENCE_EDIT_CONTACT_URL = "resident/editContact"
-let RESIDENCE_SAVE_CONTACT_URL = "resident/saveContacts"
-let RESIDENCE_DELETE_CONTACT_URL = "resident/deleteContact"
-let RESIDENCE_ADD_PHYSICIAN_URL = "resident/addPhysician"
-let RESIDENCE_EDIT_PHYSICIAN_URL = "resident/editPhysician"
-let RESIDENCE_SAVE_PHYSICIAN_URL = "resident/savePhysicians"
-let RESIDENCE_DELETE_PHYSICIAN_URL = "resident/deletePhysician"
-let RESIDENCE_ADD_CAREINFO_URL = "resident/addCareInfo"
-let RESIDENCE_EDIT_CAREINFO_URL = "resident/editCareInfo"
-let RESIDENCE_GET_CAREINFO_URL = "resident/getCareInfos"
-let RESIDENCE_GETLANGUAGES_URL = "resident/getLanguages"
-let API_IMAGE_PATH = "Resources/Photos/Resident/"
+let RESIDENCE_CREATE_URL = "API/create"
+let RESIDENCE_EDIT_URL = "API/edit"
+let RESIDENCE_DELETE_URL = "API/delete"
+let RESIDENCE_ADD_CONTACT_URL = "API/addContact"
+let RESIDENCE_EDIT_CONTACT_URL = "API/editContact"
+let RESIDENCE_SAVE_CONTACT_URL = "API/saveContacts"
+let RESIDENCE_DELETE_CONTACT_URL = "API/deleteContact"
+let RESIDENCE_ADD_PHYSICIAN_URL = "API/addPhysician"
+let RESIDENCE_EDIT_PHYSICIAN_URL = "API/editPhysician"
+let RESIDENCE_SAVE_PHYSICIAN_URL = "API/savePhysicians"
+let RESIDENCE_DELETE_PHYSICIAN_URL = "API/deletePhysician"
+let RESIDENCE_ADD_CAREINFO_URL = "API/addCareInfo"
+let RESIDENCE_EDIT_CAREINFO_URL = "API/editCareInfo"
+let RESIDENCE_GET_CAREINFO_URL = "API/getCareInfos"
+let RESIDENCE_GETLANGUAGES_URL = "API/getLanguages"
+let API_IMAGE_PATH = "Resources/Photos/API/"
 
 let TEACHERS_CLASSESS_URL = ""
 
 let APP_STORE_URL = ""
 let APP_STORE_URL_REDIRECT = ""
 
-
-
 let ErrorMeassage_K = "ErrorMeassage"
 let APIError_K = "APIError"
 let AppError_K = "AppError"
-
 
 let DATE_FORMAT_1 = "yyyy-MM-dd'T'HH:mm:ss.SSS'Z'"
 let DATE_FORMAT_12 = "yyyy-MM-dd HH:mm:ss.SSS'Z'"
@@ -195,28 +142,6 @@ let DATE_ZONE_5  = "yyyy'-'MM'-'dd'T'HH':'mm':'ss.SSSSSSS ZZZZZ"
 let API_ERROR  = "Something went wrong. Please try again later"
 let COMMON_ERROR  = "Something went wrong. Please try again later"
 let SELECT_TEXT  = "Select"
-let FACILITY_ADMIN_TEXT  = "FACILITY_ADMIN"
-let NURSE_ADMIN_TEXT  = "NURSE_ADMIN"
-let NURSE_TEXT  = "NURSE"
-
-let PIN1_TITLE_POP_UP_TEXT = "Screen lockout due to inactivity"
-let PIN1_MESSAGE_POP_UP_TEXT = "Please enter the PIN below to view the screen again or login"
-
-let PIN2_TITLE_POP_UP_TEXT = ""
-let PIN2_MESSAGE_POP_UP_TEXT = "Please enter the PIN below to view the screen"
-
-let DELETE_RESIDENT_POPUP_TITLE = "DELETING RESIDENT"
-let DELETE_RESIDENT_POPUP_TEXT = "Once you have deleted the resident, you can not retrieve or re-instate their information."
-let DELETE_WARD_POPUP_TITLE = "DELETING WARD"
-let DELETE_WARD_POPUP_TEXT = "Once you have deleted the ward, you can not retrieve or re-instate their information."
-let DELETE_NURSE_POPUP_TITLE = "DELETING NURSE"
-let DELETE_NURSE_POPUP_TEXT = "Once you have deleted the nurse, you can not retrieve or re-instate their information."
-let DELETE_STAFF_POPUP_TITLE = "DELETING STAFF"
-let DELETE_STAFF_POPUP_TEXT = "Once you have deleted the staff member, you can not retrieve or re-instate their information."
-let DELETE_PHYSICIAN_POPUP_TITLE = "DELETING PHYSICIAN"
-let DELETE_PHYSICIAN_POPUP_TEXT = "Once you have deleted the physician, you can not retrieve or re-instate their information."
-let DELETE_CONTACT_POPUP_TITLE = "DELETING CONTACT"
-let DELETE_CONTACT_POPUP_TEXT = "Once you have deleted the contact, you can not retrieve or re-instate their information."
 
 
 let Font_Family  = "OpenSans"
